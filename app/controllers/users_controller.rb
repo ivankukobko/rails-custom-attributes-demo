@@ -3,7 +3,6 @@
 class UsersController < ApplicationController
   def update
     user = User.find(params[:id])
-    # user.assign_attributes(permitted_params)
     json, status = if user.update(permitted_params)
                      [{}, :ok]
                    else
@@ -11,9 +10,6 @@ class UsersController < ApplicationController
                    end
 
     render json:, status:
-  rescue StandardError => e
-    puts e
-    puts e.backtrace
   end
 
   private
