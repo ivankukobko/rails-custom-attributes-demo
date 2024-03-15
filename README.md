@@ -21,6 +21,8 @@ Tests cover these cases:
 
 ## How to check
 
+UPD: you definitely need to initialize some database (sqlite by default) to run and test the code!
+
 1. Run `docker compose --build` + `docker compose exec rails bash` to start app container and login into bash, then run test or whatever you need
 2. Run `docker compose run rails bash` to log into bash only
 
